@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>لیست پست‌ها</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>تیتر</th>
+      <th>پست</th>
+      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= post.content %></td>
+        
+        <td><%= link_to 'نمایش', post, class: "btn btn-default" %></td>
+        <td><%= link_to 'ویرایش', edit_post_path(post), class: "btn btn-default" %></td>
+        <td><%= link_to 'حذف', post, method: :delete, 
+                  data: { confirm: 'آیا اطمینان دارید؟' },
+                  class: "btn btn-danger"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'پست جدید', new_post_path, class: "btn btn-default" %>
