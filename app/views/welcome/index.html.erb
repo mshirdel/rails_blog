@@ -2,14 +2,19 @@
 <h3>به بلاگ روبی آن ریلز خوش آمدید</h3>
 <div class="row">
     <div class="span2"></div>
-    <div class="span8">
+    <div class="span8" ng-controller="blogCtrl">
 
-        <% @posts.each do |post| %>
-
-          <h3><%= link_to post.title, post %></h3>
-          <p><%= post.content %></p>
-          <hr>
-        <% end %>
+        <div ng-repeat="post in all_post">
+            <a href="#" ng-click="postDetails(post.id)">{{ post.title }}</a>
+            <br/>
+            {{ post.cdate }}
+            <p align="justify">
+                {{ shortText(post.content) }}
+            </p>
+            <input type="button" value="ادامه" class="btn" ng-click="postDetails(post.id)">
+            <br/>
+            <hr/>
+        </div>
 
     </div>
     <div class="span2"></div>
