@@ -18,7 +18,7 @@ var host = location.protocol.concat("//").concat(window.location.hostname).conca
 var app = angular.module('rails_blog', []);
 app.controller('blogCtrl', function($scope, $http){
     
-    $http.get(host + "/posts.json").success(function(response){        
+    $http.get(host + "/welcome/show").success(function(response){        
         $scope.all_post = response;
     });
     

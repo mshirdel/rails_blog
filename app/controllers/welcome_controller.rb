@@ -1,9 +1,10 @@
 class WelcomeController < ApplicationController
   def index
-  	@posts = Post.all
+#  	@posts = Post.all
   end
-
-  def test
-  	
+  
+  def show
+  	@posts = Post.all
+    render json: @posts
   end
 end
