@@ -1,20 +1,17 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: posts_tags
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  content    :text
-#  cdate      :datetime
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  group_id   :integer
-#  user_id    :integer
+#  post_id    :integer
+#  tag_id     :integer
 #
 
 require 'test_helper'
 
-class PostTest < ActiveSupport::TestCase
+class PostsTagTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

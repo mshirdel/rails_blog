@@ -1,16 +1,13 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: posts_tags
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  content    :text
-#  cdate      :datetime
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  group_id   :integer
-#  user_id    :integer
+#  post_id    :integer
+#  tag_id     :integer
 #
 
-module PostsHelper
+class PostsTag < ActiveRecord::Base
 end

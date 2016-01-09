@@ -1,16 +1,13 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: groups
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  content    :text
-#  cdate      :datetime
+#  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  group_id   :integer
-#  user_id    :integer
 #
 
-module PostsHelper
+class Group < ActiveRecord::Base
+
 end
