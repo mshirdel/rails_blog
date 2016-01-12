@@ -53,6 +53,7 @@ group :development do
 end
 
 gem 'devise'
+gem 'cancan'
 
 # Use Passenger as the app server
 gem 'passenger'
