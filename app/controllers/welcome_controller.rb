@@ -1,5 +1,6 @@
-include ActionController::Live
 class WelcomeController < ApplicationController
+  include ActionController::Live
+  
   def index
 #  	@posts = Post.all
   end
